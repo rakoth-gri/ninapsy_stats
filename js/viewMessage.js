@@ -10,10 +10,10 @@ export function viewMessage(index, storage, postWrapper) {
         <div class="post_mess__date"> ${new Date(storage.date).toLocaleString()} </div>
         <div class="post_mess__exit"> &#10006; </div>    
     `;
-    postMess.style.display = "block";
+    postMess.classList.toggle('active');
 
     postMess.querySelector('.post_mess__exit').addEventListener('click', function() {
-        postMess.style.display = "none";
+        postMess.classList.toggle('active');
         postWrapper[index].style.background = "transparent";
     });
 

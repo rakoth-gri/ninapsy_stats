@@ -1,0 +1,60 @@
+// модальное окно сообщений
+.post_mess
+	position: fixed
+	width: 25%
+	min-height: 300px
+	margin: 21% auto
+	z-index: 2
+	background: url('../img/bg__main.jpg')
+	left: 0.5%
+	text-align: left
+	border-radius: 20px
+	border: 1.5px solid	$base-color
+	padding: 12px
+	color: $base-color
+	display: none    
+	&__title
+		color: $base-color
+		text-align: center
+		margin: 8px
+		&::after
+			content: ''
+			width: 60%
+			height: 2px
+			background: $bright-color
+			display: block
+			margin: 4px auto
+	&__text
+		color: inherit
+		text-align: justify		
+	&__exit
+		position: absolute
+		right: 1%
+		top: 0.1%
+		color: $bright-color
+		transition: 0.4s all
+		font-size: 32px
+		&:hover
+			color: $base-color	
+	&__date
+		position: absolute
+		right: 1%
+		bottom: 1%
+		color: $bright-color		
+		font-size: 32px
+.active
+    display: block
+    animation-name: flying
+    animation-duration: 0.4s
+    animation-timing-function: ease-out
+    animation-fill-mode: forwards   
+
+
+@keyframes flying
+    from
+        left: -30%
+        margin: 24% auto 
+    to
+        left: 37.5%
+        margin: 12% auto          	
+
