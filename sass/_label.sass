@@ -1,0 +1,90 @@
+label
+    width: 85%
+    text-align: center
+    color: $base-color
+    font-weight: $fw
+hr
+    width: 75%     
+    background: #b3b2b2
+    margin: 5px auto
+    border: none
+    height: 1.4px
+
+
+.label
+    display: flex
+    padding: 20px 0 
+    flex-direction: column
+    align-items: center 
+    background: #faa
+    grid-area: label
+    border: 2px solid #ffb
+    justify-content: flex-start    
+    &__app
+        font-size: 1em
+        text-align: center        
+        margin: 3% 0px 
+        transition: 0.5s all
+        color: $base-color
+        width: 75%        
+        background-color: $bright-color
+        height: 30px
+        line-height: 30px       
+        border-radius: 5px
+        text-decoration: none
+        text-transform: capitalize
+        font-weight: 200
+        font-family: Arial, serif        
+        // чтобы работалa line-height - надо padding устанавливать в 0
+        &:hover
+            background-color: transparent
+    &__author
+        font-weight: 300
+        text-transform: lowercase
+        font-style: italic
+        color: #ffc
+    &__button
+        @include section__btn
+        margin: 12px auto
+        width: 75%
+        &:hover				
+	        background: none
+    &__input
+        @include input
+        padding: 4px
+        height: 35px
+        width: 75%
+        border: $base-color 2px solid
+        margin: 12px 7px
+        color: rgba(0, 0, 0, .7)             
+    &__sum   
+        padding: 4px
+        height: auto
+        width: 75%
+        border: $base-color 2px solid
+        margin: 12px auto
+        color: $bright-color
+        border-radius: 5px
+        display: none        
+        text-align: center
+        font-weight: 600    
+    &__btn_date
+        @include section__btn
+        margin: 12px auto
+        width: 75%
+        display: inline-block
+        &:hover				
+	        background: none   
+    &__name
+        @include input
+        padding: 4px
+        height: 35px
+        width: 75%
+        border: $base-color 2px solid
+        margin: 12px 7px
+        color: rgba(0, 0, 0, .7)          
+
+input#begin
+    position: relative
+    right: -3.2% 
+

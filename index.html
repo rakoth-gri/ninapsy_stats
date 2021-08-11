@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Stats </title>
+    <script defer src="./js/index.js" type="module"></script>
+    <link rel="stylesheet" type="text/css" href="./css/main.min.css?v.4">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="label">
+            <a class="label__app" href="./index.html"> Журнал клиентов </a>
+            <!-- <br> -->
+            <small class="label__author"> by Y_VAS_BUDET_REBENOK </small>
+            <button class="label__button"> Избранное </button>
+            <hr>
+            <label for="begin"> C <input type="date" class="label__input" id="begin"></label>
+            <label for="end"> ПО <input type="date" class="label__input" id="end"></label>
+            <button class="label__btn_date"> Фильтровать по дате </button>
+            <hr>
+            <input type="text" class="label__name" placeholder="Выберите имя">
+            <hr>
+            <div class="label__sum"></div>
+
+        </div>
+        <div class="content">
+            <form class="content__form">
+                <input type="text" class="content__form_input" placeholder="Имя" name="name">
+                <span></span>
+                <input type="text" class="content__form_input" placeholder="Телефон" name="tel">
+                <span></span>
+                <select name="select" class="content__form_select">
+                    <option value=""> Форма приема </option>
+                    <option value="очная"> очная  </option>
+                    <option value="заочная"> заочная </option>
+                </select>
+                <span> </span>
+                <textarea type="text" class="content__form_textarea" placeholder="Запрос" name="textarea"></textarea>
+                <span></span>
+                <button type="submit" class="content__form_btn"> Отправить </button>
+            </form>
+
+            <!-- фон для секции контента -->
+            <img alt="фон секции" src="./img/bg_2.jpg" class="content__form_img">
+            <h1 class="content__title"> Каталог записей... </h1>
+        </div>
+    </div>
+</body>
+
+</html>

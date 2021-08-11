@@ -1,0 +1,60 @@
+// variables
+$base-color: #ffd
+$text-color: rgba(0,0,0, .85)
+$big-margin: 50px
+$small-margin: 15px 0
+
+@mixin btn 
+	outline: none
+	border: 2px solid #ffd
+	border-radius: 5px
+	height: 50px
+	padding: 10px
+	margin: $small-margin	       
+
+.content	
+	grid-area: content
+	color: white
+	position: relative
+	&__form
+		width: 50%		
+		display: flex
+		flex-direction: column
+		align-items: center
+		justify-content: flex-start
+		margin: $medium-margin auto 		
+		&_input, &_select, &_textarea
+			@include input
+			font-family: Arial		
+		&_btn
+			@include btn
+			width: 50%
+			color: white
+			font-weight: $fw
+			background-color: yellow
+			transition: 0.5s all
+			&:hover
+				background: none
+				color: red
+		&_img
+			width: 100%
+			position: absolute
+			top: 0
+			left: 0
+			height: 100%
+			object-fit: cover
+			filter: blur(2.2px)
+			z-index: -1	
+		&_select
+			option				
+				color: $text-color
+	&__title
+		text-align: center
+		margin: $small-margin
+		font-size: $title-font				
+		color: $base-color
+
+.error
+    color: $bright-color
+    text-transform: uppercase   
+

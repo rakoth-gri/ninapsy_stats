@@ -1,0 +1,80 @@
+// variables
+$base-color: #ffd
+$text-color: rgba(0,0,0, .85)
+$bright-color: #e44048
+$yellow-color: yellow
+
+$big-margin: 50px
+$medium-margin: 25px
+$small-margin: 15px
+
+$post-font: 15px
+$title-font: 22px
+$fw: 600 
+
+// примеси
+@mixin btn 
+	outline: none
+	border: 2px solid blue
+	background-color: $yellow-color
+	border-radius: 5px
+	height: 50px
+	padding: 10px
+	margin: $small-margin
+
+@mixin section__btn
+	margin: auto
+	transition: 0.5s all
+	color: $base-color
+	width: 45%
+	padding: none
+	background-color: $bright-color
+	height: 30px
+	display: flex
+	align-items: center
+	justify-content: center
+	font-weight: 200
+	outline: none
+	border: none
+	border-radius: 5px
+
+@mixin input	
+	width: 50%
+	background: none
+	color: $base-color
+	@include btn
+	&::placeholder
+		opacity: .7
+		transition: 0.6s all
+		color: $base-color				
+	&:focus
+		&::placeholder
+			opacity: .1
+			transform: scale(.1)	
+
+// общие стили 
+*
+	box-sizing: border-box
+	margin: 0
+	padding: 0
+	color: $text-color
+	font-weight: 300
+	font-size: 16px
+
+
+// импорты css
+@import "content"
+@import "label"
+@import 'posts'
+@import "content_media"
+@import "label_media"
+@import 'posts_media'
+@import 'main_media'	
+
+
+// основной контейнер приложения 
+.wrapper
+	display: grid
+	grid-template-areas: "label content"
+	grid-template-columns: 2.5fr 9.5fr
+

@@ -1,0 +1,58 @@
+// медиа-запросы ---------------
+@media screen and ( min-width: 992px)
+	.content
+		&__form
+			width: 75%
+			&_input, &_select, &_textarea
+				width: 75%
+			&_btn				
+				width: 75%
+
+@media ( min-width: 768px) and ( max-width: 991.99px)	
+	.content	
+		&__form
+			width: 70%
+			margin: 20px auto
+			&_input, &_select, &_textarea, &_btn
+				width: 85%
+		&__title
+			font-size: 20px
+
+@media ( min-width: 576px) and ( max-width: 767.99px)	
+	.content	
+		&__form
+			width: 70%
+			margin: 20px auto
+			&_input, &_select, &_textarea, &_btn
+				width: 95%
+				font-size: 14px
+				padding: 5px
+				margin: 9px 0
+				height: 35px
+		&__title
+			font-size: 19px
+
+	.error
+		text-align: center
+		font-size: 14px	
+
+@media ( max-width: 576px) 
+	.content	
+		&__form
+			width: 83%
+			margin: 12px auto
+			&_input, &_select, &_textarea, &_btn
+				width: 100%
+				font-size: 14px
+				padding: 5px
+				margin: 6px 0
+				height: 35px
+		&__title
+			font-size: 17px
+
+	.error
+		text-align: center
+		font-size: 13px														
+
+	
+
