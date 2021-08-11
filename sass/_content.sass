@@ -16,6 +16,7 @@ $small-margin: 15px 0
 	grid-area: content
 	color: white
 	position: relative
+	padding: 30px 0
 	&__form
 		width: 50%		
 		display: flex
@@ -24,8 +25,9 @@ $small-margin: 15px 0
 		justify-content: flex-start
 		margin: $medium-margin auto 		
 		&_input, &_select, &_textarea
-			@include input
-			font-family: Arial		
+			@include input			
+		&_textarea			
+			resize: vertical				
 		&_btn
 			@include btn
 			width: 50%

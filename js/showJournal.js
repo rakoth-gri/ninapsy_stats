@@ -18,12 +18,12 @@ export function showJournal(data) {
         like ? a += " like" : a;
 
         post.innerHTML = `
-                <span class="${a}"></span>
-                <span class="post__span"> <span class="post__span_field"> имя: </span> ${name}</span>                
-                <span class="post__span"> <span class="post__span_field"> дата: </span>${new Date(date).toDateString().slice(4)}</span>
-                <span class="post__span"> <span class="post__span_field"> тел: </span> ${phone}</span>
-                <span class="post__span"> <span class="post__span_field"> форма прием: </span> ${select}</span>
-                <span class="post__span"> <span class="post__span_field"> тема: </span> ${message} </span>
+                <span class="icon-star-empty ${a}"></span>
+                <span class="post__span"> <span class="icon-user-tie"></span> ${name}</span>                
+                <span class="post__span"> <span class="icon-calendar"></span> ${new Date(date).toDateString().slice(4)}</span>
+                <span class="post__span"> <span class="icon-mobile"></span> ${phone}</span>
+                <span class="post__span"> <span class="icon-file-text"></span> ${select}</span>
+                <span class="post__span"> <span class="icon-bubble2"></span> ${message} </span>
                 <button class="post__btn"> удалить </button>
                 `;
         content__posts.append(post);
@@ -34,7 +34,7 @@ export function showJournal(data) {
 
     post__btn.forEach((item, index) => {
         item.addEventListener('click', () => {
-            deleteConsultations(index, data)
+            deleteConsultations(index, data);
         });
     });
 

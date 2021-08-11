@@ -21,6 +21,7 @@ $fw: 600
 	height: 50px
 	padding: 10px
 	margin: $small-margin
+	font-family:  'Libre Franklin' 
 
 @mixin section__btn
 	margin: auto
@@ -37,6 +38,7 @@ $fw: 600
 	outline: none
 	border: none
 	border-radius: 5px
+	font-family:  'Libre Franklin' 
 
 @mixin input	
 	width: 50%
@@ -46,20 +48,12 @@ $fw: 600
 	&::placeholder
 		opacity: .7
 		transition: 0.6s all
-		color: $base-color				
+		color: $base-color
+		font-family:  'Libre Franklin' 				
 	&:focus
 		&::placeholder
 			opacity: .1
-			transform: scale(.1)	
-
-// общие стили 
-*
-	box-sizing: border-box
-	margin: 0
-	padding: 0
-	color: $text-color
-	font-weight: 300
-	font-size: 16px
+			transform: scale(.1)
 
 
 // импорты css
@@ -69,7 +63,18 @@ $fw: 600
 @import "content_media"
 @import "label_media"
 @import 'posts_media'
-@import 'main_media'	
+@import 'main_media'
+@import 'fonticon'				
+
+// общие стили 
+*
+	box-sizing: border-box
+	margin: 0
+	padding: 0
+	color: $text-color
+	font-weight: 300
+	font-size: 20px
+	font-family: 'Crimson Pro', serif
 
 
 // основной контейнер приложения 

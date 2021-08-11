@@ -1,10 +1,10 @@
 import { getFromLS, RecordInLS } from './LS.js';
 import { form, input, select, textArea, label__likes, label__date, label__sum, label__btn_date, label__name } from './constants.js';
-import { Validation } from './validation.js'
-import { showJournal } from './showJournal.js'
-import { filter_likes } from './filter_likes.js'
-import { filter_dates } from './filter_dates.js'
-import { filter_names } from './filter_names.js'
+import { Validation } from './validation.js';
+import { showJournal } from './showJournal.js';
+import { filter_likes } from './filter_likes.js';
+import { filter_dates } from './filter_dates.js';
+import { filter_names } from './filter_names.js';
 
 
 
@@ -36,13 +36,13 @@ form.addEventListener('submit', function(e) {
     }
 
     if (validate) {
-        let data = { name: (input[0].value).trim().toLowerCase(), date: new Date(), phone: input[1].value, select: select.value, message: (textArea.value).trim(), like: false }
+        let data = { name: (input[0].value).trim().toLowerCase(), date: new Date(), phone: input[1].value, select: select.value, message: (textArea.value).trim(), like: false };
         data.select === 'очная' ? data.price = 2000 : data.price = 1700;
-        storage.push(data)
-        RecordInLS(storage)
+        storage.push(data);
+        RecordInLS(storage);
         showJournal(storage);
 
-        this.reset()
+        this.reset();
     }
 });
 
@@ -51,7 +51,7 @@ form.addEventListener('submit', function(e) {
 label__likes.addEventListener('click', () => {
     let filter_like = filter_likes();
     if (filter_like.length) showJournal(filter_like);
-})
+});
 
 // даты --------------------
 label__btn_date.addEventListener('click', () => {
@@ -62,11 +62,11 @@ label__btn_date.addEventListener('click', () => {
     if (arr.length > 0) {
         const { newArr, sum } = filter_dates(arr);
         label__sum.style.display = 'block';
-        sum ? label__sum.innerHTML = sum.toLocaleString() + ' руб.' : label__sum.textContent = 'В выбранный период консультации не проводились!'
-        showJournal(newArr)
+        sum ? label__sum.innerHTML = sum.toLocaleString() + ' руб.' : label__sum.textContent = 'В выбранный период консультации не проводились!';
+        showJournal(newArr);
         for (let i of label__date) { i.value = ''; }
     } else {
-        label__sum.style.display = "none"
+        label__sum.style.display = "none";
         showJournal(storage);
     }
 });
@@ -78,13 +78,13 @@ label__name.addEventListener('change', function() {
         { nameArr, summ } = filter_names(a);
 
     if (nameArr.length) {
-        showJournal(nameArr)
+        showJournal(nameArr);
         label__sum.style.display = 'block';
-        label__sum.textContent = summ.toLocaleString() + ' руб.'
+        label__sum.textContent = summ.toLocaleString() + ' руб.';
 
     } else {
         alert("Совпадения отсутствуют!");
-        showJournal(storage)
+        showJournal(storage);
         label__sum.style.display = 'none';
     }
-})
+});

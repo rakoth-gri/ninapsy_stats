@@ -7,7 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Stats </title>
     <script defer src="./js/index.js" type="module"></script>
-    <link rel="stylesheet" type="text/css" href="./css/main.min.css?v.4">
+    <link rel="stylesheet" type="text/css" href="./css/main.min.css?v.5">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@500&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="./favicon/favicon_stats.jpg" type="image/x-icon">
 </head>
 
 <body>
@@ -16,11 +18,17 @@
             <a class="label__app" href="./index.html"> Журнал клиентов </a>
             <!-- <br> -->
             <small class="label__author"> by Y_VAS_BUDET_REBENOK </small>
-            <button class="label__button"> Избранное </button>
+            <button class="label__button"> <span class="icon-filter"></span> Избранное </button>
             <hr>
-            <label for="begin"> C <input type="date" class="label__input" id="begin"></label>
-            <label for="end"> ПО <input type="date" class="label__input" id="end"></label>
-            <button class="label__btn_date"> Фильтровать по дате </button>
+            <label for="begin"> 
+                <span class="icon-circle-right"></span> 
+                <input type="date" class="label__input" id="begin">  
+            </label>
+            <label for="end">
+                <span class="icon-circle-left"></span>  
+                <input type="date" class="label__input" id="end"> 
+            </label>
+            <button class="label__btn_date"> <span class="icon-filter"></span> По дате </button>
             <hr>
             <input type="text" class="label__name" placeholder="Выберите имя">
             <hr>
@@ -39,7 +47,7 @@
                     <option value="заочная"> заочная </option>
                 </select>
                 <span> </span>
-                <textarea type="text" class="content__form_textarea" placeholder="Запрос" name="textarea"></textarea>
+                <textarea type="text" class="content__form_textarea" placeholder="Запрос" name="textarea" rows="100"></textarea>
                 <span></span>
                 <button type="submit" class="content__form_btn"> Отправить </button>
             </form>

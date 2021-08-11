@@ -1,9 +1,9 @@
-import { getFromLS } from './LS.js'
+import { getFromLS } from './LS.js';
 
 // прототипируем метод ---
 Date.prototype.dateSum = function() {
     return this.getDate() + this.getMonth() + this.getFullYear();
-}
+};
 
 export const filter_dates = (arr) => {
 
@@ -16,7 +16,7 @@ export const filter_dates = (arr) => {
         sum = newArr.reduce((acc, { price }) => acc += price, 0);
         return { sum, newArr };
     }
-    newArr = storage.filter(({ date }) => new Date(date).dateSum() >= arr[0].dateSum() && new Date(date).dateSum() <= arr[1].dateSum())
+    newArr = storage.filter(({ date }) => new Date(date).dateSum() >= arr[0].dateSum() && new Date(date).dateSum() <= arr[1].dateSum());
     sum = newArr.reduce((acc, { price }) => acc += price, 0);
-    return { sum, newArr }
-}
+    return { sum, newArr };
+};

@@ -5,10 +5,10 @@
 	display: grid
 	grid-gap: 1.5%
 	grid-template-columns: repeat(3, 1fr)
-	justify-items: center
+	justify-content: start
 	height: 2000
 	overflow: auto	
-	font-family: Arial, serif	
+	padding: $medium-margin 10px	
 	.post
 		width: 97%			
 		display: flex
@@ -19,40 +19,23 @@
 		border-radius: 8px
 		border: 1.5px solid	$base-color
 		position: relative		
-		&__like
-			width: 20px
-			height: 20px
-			background-color: #ff9
-			border-radius: 50%
+		&__like					
 			position: absolute
-			bottom: 3%
-			left: 3%
-			// &::before
-			// 	content: ''
-			// 	display: inline-block
-			// 	width: 20px
-			// 	height: 20px
-			// 	background-color: #ff9
-			// 	position: absolute
-			// 	bottom: 3%
-			// 	left: 3%
-			// 	background-image: url('../')
+			bottom: 4.5%
+			left: 4%							
 		&__span
 			margin: 5px			
 			text-align: left
 			width: 100%			
 			font-size: $post-font
-			color: $bright-color
+			color: $bright-color			
 			&:nth-child(2)				
 				text-transform: capitalize	
 			&:nth-child(6)				
 				height: 45px
 				overflow: auto
-			&_field
-				font-weight: $fw
-				color: $base-color
-				text-transform: lowercase
-				margin: 0 2%
+				&::after
+					display: none			
 			&::after
 				content: ''
 				display: block		
@@ -62,7 +45,7 @@
 				height: 1.5px
 				border: none
 		.like
-			background: $bright-color		
+    		background: $bright-color    					
 		&__btn			
 			@include section__btn
 			&:hover				
