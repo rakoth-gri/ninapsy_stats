@@ -41,12 +41,13 @@ form.addEventListener('submit', function(e) {
         storage.push(data);
         RecordInLS(storage);
         showJournal(storage);
-
         this.reset();
     }
 });
 
+
 // ---------------- ФИЛЬТР -------------------
+
 // лайки -----------------
 label__likes.addEventListener('click', () => {
     let filter_like = filter_likes();
@@ -62,7 +63,7 @@ label__btn_date.addEventListener('click', () => {
     if (arr.length > 0) {
         const { newArr, sum } = filter_dates(arr);
         label__sum.style.display = 'block';
-        sum ? label__sum.innerHTML = sum.toLocaleString() + ' руб.' : label__sum.textContent = 'В выбранный период консультации не проводились!';
+        sum ? label__sum.innerHTML = sum.toLocaleString() + ' &#8381;' : label__sum.textContent = 'В выбранный период консультации не проводились!';
         showJournal(newArr);
         for (let i of label__date) { i.value = ''; }
     } else {
@@ -71,7 +72,7 @@ label__btn_date.addEventListener('click', () => {
     }
 });
 
-// имя  -----------------
+// имена  -----------------
 label__name.addEventListener('change', function() {
 
     let a = (this.value).trim().toLowerCase(),
@@ -80,7 +81,7 @@ label__name.addEventListener('change', function() {
     if (nameArr.length) {
         showJournal(nameArr);
         label__sum.style.display = 'block';
-        label__sum.textContent = summ.toLocaleString() + ' руб.';
+        label__sum.innerHTML = summ.toLocaleString() + ' &#8381;';
 
     } else {
         alert("Совпадения отсутствуют!");

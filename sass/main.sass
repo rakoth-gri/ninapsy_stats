@@ -24,7 +24,6 @@ $fw: 600
 	font-family:  'Libre Franklin' 
 
 @mixin section__btn
-	margin: auto
 	transition: 0.5s all
 	color: $base-color
 	width: 45%
@@ -38,7 +37,19 @@ $fw: 600
 	outline: none
 	border: none
 	border-radius: 5px
-	font-family:  'Libre Franklin' 
+	font-family:  'Libre Franklin'	
+
+@mixin post__span_btn
+	outline: none	
+	background-color: transparent
+	color: $bright-color	
+	width: 70%
+	text-align: center
+	border: 1.7px solid $base-color
+	border-radius: 7px
+	padding: 1%
+	margin: 5px auto
+	font-size: 18px
 
 @mixin input	
 	width: 50%
@@ -82,4 +93,53 @@ $fw: 600
 	display: grid
 	grid-template-areas: "label content"
 	grid-template-columns: 2.5fr 9.5fr
+	position: relative
+
+// модальное окно сообщений
+.post_mess
+	position: fixed
+	width: 25%
+	height: 400px
+	margin: 12% auto
+	z-index: 1
+	background: url('../img/bg__main.jpg')
+	left: 37.5%
+	text-align: left
+	border-radius: 20px
+	border: 1.5px solid	$base-color
+	padding: 12px
+	color: $base-color
+	display: none
+	&__title
+		color: $base-color
+		text-align: center
+		margin: 8px
+		&::after
+			content: ''
+			width: 60%
+			height: 2px
+			background: $bright-color
+			display: block
+			margin: 4px auto
+	&__text
+		color: inherit
+		text-align: justify		
+	&__exit
+		position: absolute
+		right: 1%
+		top: 0.1%
+		color: $bright-color
+		transition: 0.4s all
+		font-size: 32px
+		&:hover
+			color: $base-color	
+	&__date
+		position: absolute
+		right: 1%
+		bottom: 1%
+		color: $bright-color		
+		font-size: 32px
+					
+
+
 

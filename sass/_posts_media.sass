@@ -2,7 +2,24 @@
 
 @media ( min-width: 1400px) 
 	.content__posts
-		grid-template-columns: repeat(auto-fit, minmax(250px, 250px))
+		grid-template-columns: repeat(auto-fit, minmax(240px, 240px))
+		justify-content: center
+		// однако
+		.post
+			width: 100%				
+			&__span
+				font-size: 18px
+				&_field
+					font-size: inherit
+				&:nth-child(6)				
+					height: 35px		
+			&__btn
+				font-size: 18px
+				
+
+@media ( min-width: 991.99px) and ( max-width: 1399.98px)
+	.content__posts
+		grid-template-columns: repeat(auto-fit, minmax(230px, 230px))
 		justify-content: center
 		// однако
 		.post
@@ -10,18 +27,10 @@
 			&__span
 				font-size: 17px
 				&_field
-					font-size: inherit
-				&:nth-child(6)				
-					height: 35px		
+					font-size: inherit					
 			&__btn
 				font-size: 17px
-				margin: 0 auto	 	
-
-@media ( min-width: 1200px) and ( max-width: 1399.98px)
-	.content__posts
-		grid-template-columns: repeat(auto-fit, minmax(210px, 210px))
-		justify-content: start
-		// однако 
+				
 	
 
 @media ( min-width: 768px) and ( max-width: 991.99px)
@@ -30,14 +39,14 @@
 		.post
 			width: 90%				
 			&__span
-				font-size: 14.8px
+				font-size: 17px
 				&_field
 					font-size: inherit
 				&:nth-child(6)				
 					height: 35px		
 			&__btn
-				font-size: 14.8px
-				margin: 0 auto
+				font-size: 17px
+				
 
 @media ( min-width: 576px) and ( max-width: 767.99px)
 	.content__posts
@@ -46,14 +55,14 @@
 		.post
 			width: 95%				
 			&__span
-				font-size: 14px
+				font-size: 17px
 				&_field
 					font-size: inherit
 				&:nth-child(6)				
 					height: 30px		
 			&__btn
-				font-size: 14px
-				margin: 0 auto
+				font-size: 17px
+				
 
 @media ( max-width: 576px)									
 	.content__posts
@@ -63,14 +72,13 @@
 		.post
 			width: 95%				
 			&__span
-				font-size: 14px
+				font-size: 17px
 				&_field
 					font-size: inherit
 				&:nth-child(6)				
 					height: 30px		
 			&__btn
-				font-size: 14px
-				margin: 0 auto
+				font-size: 17px				
 			&__like					
 				left: 5.5%											
 
