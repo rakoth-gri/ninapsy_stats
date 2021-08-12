@@ -40,7 +40,7 @@ export function showJournal(data) {
     // удаление записи
     post__btn.forEach((item, index) => {
         item.addEventListener('click', () => {
-            deleteConsultations(index, data);
+            deleteConsultations(index);
         });
     });
 
