@@ -2,7 +2,8 @@
 $base-color: #ffd
 $text-color: rgba(0,0,0, .85)
 $bright-color: #e44048
-$yellow-color: yellow
+$yellow-color: #ac9b07
+$bg-color: rgba(0,0,0,.65)
 
 $big-margin: 50px
 $medium-margin: 25px
@@ -20,8 +21,7 @@ $fw: 600
 	border-radius: 5px
 	height: 50px
 	padding: 10px
-	margin: $small-margin
-	font-family:  'Libre Franklin' 
+	margin: $small-margin	
 
 @mixin section__btn
 	transition: 0.5s all
@@ -37,7 +37,7 @@ $fw: 600
 	outline: none
 	border: none
 	border-radius: 5px
-	font-family:  'Libre Franklin'	
+	
 
 @mixin post__span_btn
 	outline: none	
@@ -46,7 +46,7 @@ $fw: 600
 	width: 70%
 	text-align: center
 	border: 1.7px solid $base-color
-	border-radius: 7px
+	border-radius: 5px
 	padding: 1%
 	margin: 5px auto
 	font-size: 18px
@@ -59,24 +59,28 @@ $fw: 600
 	&::placeholder
 		opacity: .7
 		transition: 0.6s all
-		color: $base-color
-		font-family:  'Libre Franklin' 				
+		color: $base-color			
 	&:focus
 		&::placeholder
 			opacity: .1
 			transform: scale(.1)
 
 
-// импорты css
+// импорты css --------------
 @import "content"
 @import "label"
 @import 'posts'
-@import "content_media"
-@import "label_media"
-@import 'posts_media'
-@import 'main_media'
 @import 'fonticon'
-@import 'post_mess'						
+@import 'post_mess'
+@import 'animation'
+
+// импорты css MEDIA QUERRIES --------------	
+@import 'media/post_mess_media'
+@import 'media/animation_media'
+@import "media/label_media"
+@import 'media/posts_media'
+@import 'media/main_media'
+@import "media/content_media"									
 
 // общие стили 
 *
@@ -95,3 +99,18 @@ $fw: 600
 	grid-template-areas: "label content"
 	grid-template-columns: 2.5fr 9.5fr
 	position: relative
+
+/********** SCROLL BAR CHROME ***************/
+
+::-webkit-scrollbar 
+    width: 13px
+
+::-webkit-scrollbar-thumb 
+    background-color: $bright-color
+    border-radius: 4px
+
+::-webkit-scrollbar-thumb:hover 
+    background-color: $yellow-color
+
+::-webkit-scrollbar-track 
+    background-color: $base-color

@@ -24,7 +24,7 @@ export function showJournal(data) {
                 <span class="post__span"> <span class="icon-calendar icon"></span> ${new Date(date).toDateString().slice(4)}</span>
                 <span class="post__span"> <span class="icon-mobile icon"></span> ${phone}</span>
                 <span class="post__span"> <span class="icon-file-text icon"></span> ${select}</span>                
-                <button class="post__mess_btn"> смотреть </button> 
+                <button class="post__mess_btn"> читать </button> 
                 <button class="post__btn"> удалить </button>
                 <span class="icon-bubble2 icon"></span>
                 `;
