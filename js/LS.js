@@ -1,4 +1,4 @@
-import { Key } from "./constants.js";
+import { Key, Key2 } from "./constants.js";
 
 const getFromLS = () => {
     return JSON.parse(localStorage.getItem(Key) || '[]');
@@ -8,4 +8,12 @@ const RecordInLS = (data) => {
     localStorage.setItem(Key, JSON.stringify(data));
 };
 
-export { getFromLS, RecordInLS };
+const RecordInLikeLS = (data) => {
+    localStorage.setItem(Key2, JSON.stringify(data));
+};
+
+const getLikesFromLS = () => {
+    return JSON.parse(localStorage.getItem(Key2) || '[]');
+};
+
+export { getFromLS, RecordInLS, getLikesFromLS, RecordInLikeLS };

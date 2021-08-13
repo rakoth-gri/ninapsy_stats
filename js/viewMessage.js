@@ -12,12 +12,12 @@ export function viewMessage(index, storage, postWrapper) {
             <div class="post_mess__exit"> &#10006; </div>
         </div>`;
 
-    postMessWrapper.classList.toggle('active');
+    postMessWrapper.classList.add('active');
 
     let exit = postMessWrapper.querySelector('.post_mess__exit');
 
     exit.addEventListener('click', function() {
-        postMessWrapper.classList.toggle('active');
+        postMessWrapper.classList.remove('active');
         postWrapper[index].style.background = "transparent";
     });
 }

@@ -1,12 +1,14 @@
-import { RecordInLS } from './LS.js';
-import { getFromLS } from './LS.js';
+import { RecordInLS, getLikesFromLS, getFromLS } from './LS.js';
 
-export const likedPosts = (item, index) => {
+
+export const likedPosts = likeStore => {
 
     let currentLS = getFromLS();
 
-    item.classList.toggle('like');
+    for (let i of currentLS) {
 
-    item.classList.contains('like') ? currentLS[index].like = true : currentLS[index].like = false;
+        likeStore.includes(i.id) ? i.like = true : i.like = false;
+
+    }
     RecordInLS(currentLS);
-}
+};

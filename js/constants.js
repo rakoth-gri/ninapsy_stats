@@ -7,6 +7,7 @@ const form = document.querySelector('.content__form'),
     content = document.querySelector('.content'),
     textArea = form.querySelector(".content__form_textarea"),
     Key = 'meeting',
+    Key2 = 'Likes',
     postMessWrapper = document.querySelector('.post_mess_wrapper'),
 
     label = document.querySelector('.label'),
@@ -27,4 +28,23 @@ const Reg_name = /^[A-ZА-Я\s]{3,20}$/i,
     Reg_textarea = /^.{15,120}$/i;
 
 // экспорт в другие модули -------
-export { form, input, select, textArea, btn, spanError, content__posts, Key, Reg_name, Reg_tel, Reg_textarea, label__likes, label__date, label__sum, label__btn_date, label__name, postMessWrapper };
+export {
+    form,
+    input,
+    select,
+    textArea,
+    btn,
+    spanError,
+    content__posts,
+    Key,
+    Reg_name,
+    Reg_tel,
+    Reg_textarea,
+    label__likes,
+    label__date,
+    label__sum,
+    label__btn_date,
+    label__name,
+    postMessWrapper,
+    Key2
+};
