@@ -15,7 +15,10 @@ const form = document.querySelector('.content__form'),
     label__date = label.querySelectorAll('.label__input'),
     label__btn_date = label.querySelector('.label__btn_date'),
     label__sum = label.querySelector('.label__sum'),
-    label__name = label.querySelector('.label__name');
+    label__name = label.querySelector('.label__name'),
+    labelAccordionContent = label.querySelectorAll('.label__accordion_content'),
+    labelAccordionTrigger = label.querySelectorAll('.label__accordion_trigger');
+
 
 // Переменные
 let content__posts = document.createElement('div');
@@ -46,5 +49,7 @@ export {
     label__btn_date,
     label__name,
     postMessWrapper,
-    Key2
+    Key2,
+    labelAccordionContent,
+    labelAccordionTrigger
 };

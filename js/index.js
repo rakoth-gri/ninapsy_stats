@@ -9,6 +9,8 @@ import {
     label__sum,
     label__btn_date,
     label__name,
+    labelAccordionContent,
+    labelAccordionTrigger
 } from "./constants.js";
 import { Validation } from "./validation.js";
 import { showJournal } from "./showJournal.js";
@@ -72,6 +74,15 @@ label__likes.addEventListener("click", () => {
     }
 });
 
+// аккордеон параметров фильтра --------
+
+labelAccordionTrigger.forEach((i, index) => {
+    i.addEventListener('click', function() {
+        labelAccordionContent[index].classList.toggle('label__accordion_content_active');
+        this.classList.toggle('icon-circle-right_active');
+    });
+});
+
 // даты --------------------
 label__btn_date.addEventListener("click", () => {
     let arr = [];
@@ -84,9 +95,9 @@ label__btn_date.addEventListener("click", () => {
         label__sum.style.display = "block";
         sum ? (label__sum.innerHTML = sum.toLocaleString() + " &#8381;") : (label__sum.textContent = "В выбранный период консультации не проводились!");
         showJournal(newArr);
-        for (let i of label__date) {
-            i.value = "";
-        }
+        // for (let i of label__date) {
+        //     i.value = "";
+        // }
     } else {
         label__sum.style.display = "none";
         showJournal(storage);
@@ -109,3 +120,5 @@ label__name.addEventListener("input", function() {
         label__sum.style.display = "none";
     }
 });
+
+console.log(labelAccordionContent);

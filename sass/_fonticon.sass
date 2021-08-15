@@ -34,46 +34,52 @@
     content: "\e976"     
 
 .icon-star-empty:before 
-    content: "\e9d7"
-    font-size: 22px
-    color: #ff9
-    display: block 
+    content: "\e9d7" 		    
 
 .icon-circle-right:before 
     content: "\ea42"    
 
-.icon-circle-left:before 
-    content: "\ea44"    
 
-.icon-circle-left:before, .icon-circle-right:before 
-    font-size: 22px
-    color: rgba(0,0,0, .5)
-    display: inline-block
-    position: relative
-    top: 5%         
-
-.icon-filter:before 
-    content: "\ea5b"
-    font-size: 20px
-    color: rgba(0,0,0, .5)
-    display: inline-block
-    margin-right: 10px
-
-.icon-user-tie:before, .icon-mobile:before, .icon-calendar:before, .icon-file-text:before
+// собственные стили в content__posts -------
+.icon-user-tie:before, .icon-mobile:before, .icon-calendar:before, .icon-file-text:before, .icon-bubble2:before, .icon-star-empty:before   
     font-size: 20px
     color: #ff9
     position: relative
     top: 5%
     margin-right: 5px
 
-.icon-bubble2:before    
+.icon-star-empty:before
+    margin: 0px       
+
+
+// собственные стили в label ---------
+.label 
+    .icon-calendar:before 
+        font-size: 22px
+        color: rgba(0,0,0, .88)
+        display: inline-block
+        position: relative
+        top: 5%             
+
+.icon-filter:before 
+    content: "\ea5b"
     font-size: 20px
-    color: #ff9
-    position: absolute
-    bottom: 20%
-    left: 4%
+    color: $base-color
+    display: inline-block
+    margin-right: 5px
+    font-weight: 300
 
+.icon-circle-right   
+    &:before
+        font-size: 26px
+        color: $base-color        
+        display: block
+        transform: rotateZ(90deg)
+        transition: 0.4s all        
 
+    // &:hover:before
+    //     color: green         
+    
 // медиа-запрос -------------------
 @media ( max-width: 576px)                     
     .icon-user-tie:before, .icon-bubble2:before, .icon-mobile:before, .icon-calendar:before, .icon-file-text:before, .icon-star-empty:before 
@@ -83,8 +89,14 @@
         font-size: 17px
         margin-right: 5px
 
-@media ( max-width: 991.99px)
-    .icon-circle-left:before, .icon-circle-right:before
-        position: relative
-        left: -15%     
+@media ( min-width: 768px) and ( max-width: 991.99px)   
+    .icon-circle-right   
+        &:before
+            font-size: 22px
+    .icon-filter:before
+        font-size: 21px
+        margin-right: 5px       
+
     
+            
+

@@ -19,17 +19,18 @@ export function showJournal(data) {
 
         like ? a += " like" : a;
 
-        post.innerHTML = `
-                <span class="icon-star-empty ${a} icon" data-id=${id}></span>
-                <span class="post__span"> <span class="icon-user-tie icon"></span> ${name}</span>                
-                <span class="post__span"> <span class="icon-calendar icon"></span> ${new Date(date).toDateString().slice(4)}</span>
-                <span class="post__span"> <span class="icon-mobile icon"></span> ${phone}</span>
-                <span class="post__span"> <span class="icon-file-text icon"></span> ${select}</span>                
-                <button class="post__mess_btn"> читать </button> 
-                <button class="post__btn" data-id=${id}> удалить </button>
-                <span class="icon-bubble2 icon"></span>
-                `;
-        // <span class="post__span"> <span class="icon-bubble2"></span> ${message} </span>
+        post.innerHTML = `                
+                <span class="post__span"> <span class="icon-user-tie"></span> ${name}</span>                
+                <span class="post__span"> <span class="icon-calendar"></span> ${new Date(date).toDateString().slice(4)}</span>
+                <span class="post__span"> <span class="icon-mobile"></span> ${phone}</span>
+                <span class="post__span"> <span class="icon-file-text"></span> ${select}</span>                
+                <span class="post__span"> <span class="icon-bubble2"></span> <button class="post__mess_btn"> читать </button> </span> 
+                <span class="post__span">
+                <span class="icon-star-empty ${a}" data-id=${id}></span>  
+                <button class="post__btn" data-id=${id}> удалить </button>               
+                </span>                
+        `;
+
         content__posts.append(post);
     });
 
@@ -51,17 +52,17 @@ export function showJournal(data) {
 
     // избранные записи
     post__like.forEach(item => {
-        item.addEventListener('click', () => {
+        item.addEventListener('click', function() {
             let attr = +item.getAttribute('data-id'),
                 likeStore = getLikesFromLS(),
                 ind = likeStore.indexOf(attr);
 
             // Избавляемся от копий в массиве и манипулируем attr и классом! 
-            if (!likeStore.includes(attr)) {
+            if (ind === -1) {
                 likeStore.push(attr);
-                item.classList.toggle('like');
+                this.classList.toggle('like');
             } else {
-                item.classList.toggle('like');
+                this.classList.toggle('like');
                 likeStore.splice(ind, 1);
             }
             RecordInLikeLS(likeStore);

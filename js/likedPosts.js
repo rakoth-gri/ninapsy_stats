@@ -1,4 +1,4 @@
-import { RecordInLS, getLikesFromLS, getFromLS } from './LS.js';
+import { RecordInLS, getFromLS } from './LS.js';
 
 
 export const likedPosts = likeStore => {

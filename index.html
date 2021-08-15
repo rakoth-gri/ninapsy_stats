@@ -9,7 +9,7 @@
     <meta name="robots" content="index, follow">
     <meta http-equiv="cache-control" content="no-cache">
     <script defer src="./js/index.js" type="module"></script>
-    <link rel="stylesheet" type="text/css" href="./css/main.min.css?v.8">
+    <link rel="stylesheet" type="text/css" href="./css/main.min.css?v.9">
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@500&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="./favicon/favicon_stats.jpg" type="image/x-icon">
 </head>
@@ -17,26 +17,45 @@
 <body>
     <!-- контейнер приложения -->
     <div class="wrapper">
-
         <!-- Фильтры в лейбле -->
         <div class="label">
-            <a class="label__app" href="./index.html"> Журнал клиентов </a>
+            <a class="label__app" href="./index.html"> все клиенты </a>
             <!-- <br> -->
-            <small class="label__author"> by Y_VAS_BUDET_REBENOK </small>
-            <button class="label__button"> <span class="icon-filter icon"></span> Избранное </button>
-            <hr>
-            <label for="begin"> 
-                <span class="icon-circle-right icon"></span> 
-                <input type="date" class="label__input" id="begin">  
-            </label>
-            <label for="end">
-                <span class="icon-circle-left icon"></span>  
-                <input type="date" class="label__input" id="end"> 
-            </label>
-            <button class="label__btn_date"> <span class="icon-filter icon"></span> По дате </button>
-            <hr>
-            <input type="text" class="label__name" placeholder="Выберите имя">
-            <span class="error"></span>
+            <small class="label__author"> by ninagalieva_psy </small>
+
+            <fieldset>
+                <legend> Фильтр </legend>
+
+                <button class="label__button"> <span class="icon-filter"></span> избранное </button>
+
+                <div class="label__accordion">
+                    по дате
+                    <span class="icon-circle-right label__accordion_trigger"></span>
+                </div>
+
+                <div class="label__accordion_content">
+                    <label for="begin"> 
+                    <span class="icon-calendar"></span> 
+                    <input type="date" class="label__input" id="begin">  
+                </label>
+                    <label for="end">
+                    <span class="icon-calendar"></span>  
+                    <input type="date" class="label__input" id="end"> 
+                </label>
+                    <button class="label__btn_date"> фильтровать </button>
+                </div>
+
+                <div class="label__accordion">
+                    по имени
+                    <span class="icon-circle-right label__accordion_trigger"></span>
+                </div>
+
+                <div class="label__accordion_content">
+                    <input type="text" class="label__name" placeholder="Введите имя">
+                    <span class="error"></span>
+                </div>
+            </fieldset>
+
             <hr>
             <div class="label__sum"></div>
         </div>
@@ -61,7 +80,7 @@
 
             <!-- фон для секции контента -->
             <img alt="фон секции" src="./img/bg__main.jpg" class="content__form_img">
-            <h1 class="content__title"> Каталог записей... </h1>
+            <h1 class="content__title"> Журнал записей... </h1>
         </div>
 
         <!-- информация о пациенте -->

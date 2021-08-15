@@ -1,55 +1,105 @@
+@media ( min-width: 992px) and ( max-width: 1199.99px)
+    
+    .label
+       &__accordion           
+            &_trigger:before
+                font-size: 20px   
+                 
+            
+ 
 @media ( min-width: 768px) and ( max-width: 991.99px)    
-    label
-       font-size: 14.5px
-       width: 100%
-       font-weight: 500    
-    .label		    
-        &__app, &__author, &__btn_date, &__name, &__sum,  &__input,  &__button
-            font-size: 14.5px
-            width: 80%
-        &__input
-            margin: 12px 0px   
+    
+    label#begin, label#end       
+        display: flex
+        align-items: center
 
-@media ( min-width: 768px) and ( max-width: 991.99px)
-   
+    fieldset       
+        .label		    
+            &__author, &__btn_date, &__input,  &__button
+                font-size: 18px
+                width: 96%
+            &__name
+                width: 100%
+                margin-top: 0px
+                height: 30px                                   
+            &__input
+                margin: 0px 0px 12px 0
+            &__btn_date
+                margin-top: 0px
+                width: 100%
+            &__sum    
+            font-size: 18px       
+
+        legend
+            font-size: 18px	                                       
+
+@media ( min-width: 576px) and ( max-width: 767.99px)    
     label
        font-size: 17px
        width: 100%
        font-weight: 500    
-    .label		    
-        &__app, &__author, &__btn_date, &__name, &__sum,  &__input,  &__button
+    .label        
+        &__author, &__btn_date, &__input,  &__button
             font-size: 17px
-            width: 80%
+            width: 96%
         &__input
-            margin: 12px 0px
-        &__author
-            text-align: center       
+            margin: 0px 0px 12px 0
+        &__name
+                width: 100%
+                margin-top: 0px
+                height: 30px
+                &::placeholder
+                    font-size: 17px        
+        &__accordion
+            font-size: 17px             
+            &_trigger:before
+                font-size: 19px
+        &__btn_date
+                margin-top: 0px
+                width: 100%
+        &__app
+            font-size: 17px
+        &__sum    
+            font-size: 17px                        
+    legend
+        font-size: 17px	                               
 
-@media ( min-width: 576px) and ( max-width: 767.99px)    
-    label
-       font-size: 16px
-       width: 100%
-       font-weight: 500    
-    .label		    
-        &__app, &__author, &__btn_date, &__name, &__sum,  &__input,  &__button
-            font-size: 16px
-            width: 80%
-        &__input
-            margin: 12px 0px
 
 
 @media ( max-width: 576px)    
     label
-       font-size: 14.8px
+       font-size: 16px
        width: 98%
        font-weight: 500    
     .label		    
-        &__app, &__author, &__btn_date, &__name, &__sum,  &__input,  &__button
-            font-size: 14.8px
-            width: 87%
+        &__author, &__btn_date, &__name, &__input,  &__button
+            font-size: 16px
+            width: 96%
         &__input
             margin: 12px 0px
-            width: 80%            
+            width: 80%
+        &__accordion
+            font-size: 16px             
+            &_trigger:before
+                font-size: 18px
+        &__btn_date
+                margin-top: 0px
+                width: 100%
+        &__input
+            margin: 0px 0px 12px 0
+        &__name
+                width: 100%
+                margin-top: 0px
+                height: 30px
+                &::placeholder
+                    font-size: 16px
+        &__app
+            font-size: 17px
+        &__sum    
+            font-size: 16px                                                   
+    legend
+        font-size: 17px	                               
+                            
 
                                    
 
