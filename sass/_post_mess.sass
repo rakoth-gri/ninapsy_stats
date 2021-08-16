@@ -1,22 +1,22 @@
 // модальное окно сообщений
 .post_mess_wrapper
 	position: fixed
-	width: 27%	
-	margin: 21% auto
+	width: 100%
+	height: 100vh	
 	z-index: 1
-	background: transparent
-	left: 0.5%
-	display: none
-	border-radius: 8px	
-	.post_mess				
-		width: 99%
+	background: rgba(0,0,0,.6)	
+	left: 0%
+	top: 0%
+	display: none	
+	.post_mess
+		// position: absolute				
+		width: 35%
 		height: auto
 		text-align: left
 		border-radius: 8px
 		border: 2.5px solid	$base-color
 		padding: 12px
-		color: #000
-		align-self: center
+		color: #000		
 		margin: auto
 		background: #ffaaaa	
 		&__title
@@ -35,11 +35,13 @@
 			color: inherit
 			text-align: justify
 			font-weight: 300
-			word-spacing: 0.9px		
+			word-spacing: 0.9px			
+			// перенос строк -------
+			word-break: break-all		
 		&__exit
 			position: absolute
-			right: 1.5%
-			top: -4%
+			right: 0.5%
+			top: -0%
 			color: $bright-color
 			transition: 0.4s all
 			font-size: 32px

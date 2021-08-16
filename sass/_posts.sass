@@ -42,10 +42,18 @@
 				margin: 7px auto
 				background: #ffe
 				height: 1.5px
-				border: none						
+				border: none
+			.icon-star-empty::before
+				font-size: 20px
+				color: #ff9
+				position: relative
+				top: 5%
+				margin: 0px
+				margin-right: 5px							
 			.like
-				font-weight: 900
-				background: $bright-color			
+				&::before
+					font-weight: 700
+					color: red			
 		&__mess_btn
 			@include post__span_btn			
 			color: $base-color

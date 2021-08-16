@@ -9,7 +9,7 @@
     <meta name="robots" content="index, follow">
     <meta http-equiv="cache-control" content="no-cache">
     <script defer src="./js/index.js" type="module"></script>
-    <link rel="stylesheet" type="text/css" href="./css/main.min.css?v.9">
+    <link rel="stylesheet" type="text/css" href="./css/main.min.css?10">
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@500&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="./favicon/favicon_stats.jpg" type="image/x-icon">
 </head>
@@ -17,20 +17,21 @@
 <body>
     <!-- контейнер приложения -->
     <div class="wrapper">
+        <span class="icon-paragraph-justify"></span>
         <!-- Фильтры в лейбле -->
         <div class="label">
-            <a class="label__app" href="./index.html"> все клиенты </a>
+            <a class="label__app" href="./index.html"> обновить </a>
             <!-- <br> -->
             <small class="label__author"> by ninagalieva_psy </small>
 
             <fieldset>
-                <legend> Фильтр </legend>
+                <legend> <span class="icon-filter"></span> </legend>
 
-                <button class="label__button"> <span class="icon-filter"></span> избранное </button>
+                <button class="label__button"> <span class="icon-star-empty"></span> избранное </button>
 
                 <div class="label__accordion">
-                    по дате
-                    <span class="icon-circle-right label__accordion_trigger"></span>
+
+                    <span class="icon-circle-right label__accordion_trigger"></span> по дате
                 </div>
 
                 <div class="label__accordion_content">
@@ -46,8 +47,8 @@
                 </div>
 
                 <div class="label__accordion">
-                    по имени
-                    <span class="icon-circle-right label__accordion_trigger"></span>
+
+                    <span class="icon-circle-right label__accordion_trigger"></span> по имени
                 </div>
 
                 <div class="label__accordion_content">
@@ -73,7 +74,9 @@
                     <option value="заочная"> заочная </option>
                 </select>
                 <span> </span>
-                <textarea type="text" class="content__form_textarea" placeholder="Запрос" name="textarea" rows="100"></textarea>
+                <input type="text" class="content__form_input" placeholder="Введите дату" name="date">
+                <span></span>
+                <textarea type="text" class="content__form_textarea" placeholder="Запрос" name="textarea"></textarea>
                 <span></span>
                 <button type="submit" class="content__form_btn"> Отправить </button>
             </form>

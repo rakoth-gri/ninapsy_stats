@@ -17,8 +17,9 @@ const form = document.querySelector('.content__form'),
     label__sum = label.querySelector('.label__sum'),
     label__name = label.querySelector('.label__name'),
     labelAccordionContent = label.querySelectorAll('.label__accordion_content'),
-    labelAccordionTrigger = label.querySelectorAll('.label__accordion_trigger');
+    labelAccordionTrigger = label.querySelectorAll('.label__accordion_trigger'),
 
+    burger = document.querySelector('.icon-paragraph-justify');
 
 // Переменные
 let content__posts = document.createElement('div');
@@ -28,7 +29,8 @@ content.append(content__posts);
 // Регулярные выражения
 const Reg_name = /^[A-ZА-Я\s]{3,20}$/i,
     Reg_tel = /^[\d]{11}$/i,
-    Reg_textarea = /^.{15,120}$/i;
+    Reg_textarea = /^.{15,120}$/i,
+    Reg_date = /^[0-9]{4}.[0-9]{2}.[0-9]{2}$/i;
 
 // экспорт в другие модули -------
 export {
@@ -42,6 +44,7 @@ export {
     Key,
     Reg_name,
     Reg_tel,
+    Reg_date,
     Reg_textarea,
     label__likes,
     label__date,
@@ -51,5 +54,7 @@ export {
     postMessWrapper,
     Key2,
     labelAccordionContent,
-    labelAccordionTrigger
+    labelAccordionTrigger,
+    label,
+    burger
 };

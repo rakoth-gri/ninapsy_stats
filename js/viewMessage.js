@@ -8,7 +8,7 @@ export function viewMessage(index, storage, postWrapper) {
         <div class="post_mess">
             <h1 class="post_mess__title"> Клиент: &nbsp; ${storage.name.substr(0,1).toUpperCase()}${storage.name.substr(1).toLowerCase()} </h1>
             <div class="post_mess__text"> ${storage.message.trim()} </div>
-            <div class="post_mess__date"> ${new Date(storage.date).toLocaleString()} </div>
+            <div class="post_mess__date"> ${new Date(storage.date).toLocaleDateString()} </div>
             <div class="post_mess__exit"> &#10006; </div>
         </div>`;
 

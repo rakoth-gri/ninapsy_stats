@@ -10,7 +10,9 @@ import {
     label__btn_date,
     label__name,
     labelAccordionContent,
-    labelAccordionTrigger
+    labelAccordionTrigger,
+    label,
+    burger
 } from "./constants.js";
 import { Validation } from "./validation.js";
 import { showJournal } from "./showJournal.js";
@@ -41,7 +43,7 @@ form.addEventListener("submit", function(e) {
     for (let i of form__elements) {
         if (i.value === "") {
             validate = false;
-            i.nextElementSibling.classList.add("error");
+            i.nextElementSibling.classList.add("error-form");
             i.nextElementSibling.textContent = "Заполните данное поле";
         }
     }
@@ -49,9 +51,9 @@ form.addEventListener("submit", function(e) {
     if (validate) {
         let data = {
             name: input[0].value.trim().toLowerCase(),
-            date: Date(),
             phone: input[1].value,
             select: select.value,
+            date: new Date(input[2].value),
             message: textArea.value.trim(),
             like: false,
             id: +(Math.random() * 100).toFixed()
@@ -121,4 +123,9 @@ label__name.addEventListener("input", function() {
     }
 });
 
-console.log(labelAccordionContent);
+// бургерное меню ------------------------------
+
+burger.addEventListener('click', function() {
+    this.classList.toggle('icon-paragraph-justify_active');
+    label.classList.toggle('label_active');
+});

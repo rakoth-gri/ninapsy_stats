@@ -1,4 +1,4 @@
-import { Reg_name, Reg_tel, Reg_textarea } from "./constants.js";
+import { Reg_name, Reg_tel, Reg_textarea, Reg_date } from "./constants.js";
 
 export const Validation = (data) => {
 
@@ -12,7 +12,7 @@ export const Validation = (data) => {
 function correctValues(el) {
 
     let elem = el.nextElementSibling;
-    elem.classList.add('error');
+    elem.classList.add('error-form');
 
     if (el.name === "tel")
         Reg_tel.test(el.value) ? elem.textContent = '' : elem.textContent = 'Введите корректный телефон!';
@@ -20,6 +20,8 @@ function correctValues(el) {
         Reg_textarea.test(el.value) ? elem.textContent = '' : elem.textContent = 'Введите не менее 15 символов';
     else if (el.name === "name")
         Reg_name.test(el.value) ? elem.textContent = '' : elem.textContent = 'Введите корректное имя';
+    else if (el.name === "date")
+        Reg_date.test(el.value) ? elem.textContent = '' : elem.textContent = 'Дата в формате год-месяц-число: "2020-07-28"';
     else
         el.value ? elem.textContent = '' : elem.textContent = 'Выберите тип консультации';
 }

@@ -28,9 +28,14 @@
 			&_input, &_select, &_textarea, &_btn
 				width: 85%
 			&_img
-				filter: blur(2px)		
+				filter: blur(2px)
+			&_textarea			
+				min-height: 70px			
 		&__title
-			font-size: 20px			
+			font-size: 20px
+
+	.error-form	
+		font-size: 18px							
 
 @media ( min-width: 576px) and ( max-width: 767.99px)	
 	.content	
@@ -44,16 +49,19 @@
 				margin: 9px 0
 				height: 35px
 			&_img
-				filter: blur(2px)			
+				filter: blur(2px)
+			&_textarea			
+				min-height: 55px				
 		&__title
 			font-size: 19px				
 
-	.error
-		text-align: center
-		font-size: 14px	
+	.error-form	
+		font-size: 14px		
+
 
 @media ( max-width: 576px) 
-	.content	
+	.content
+		width: 100%	
 		&__form
 			width: 83%
 			margin: 12px auto
@@ -63,14 +71,13 @@
 				padding: 5px
 				margin: 6px 0
 				height: 35px
+			&_textarea			
+				min-height: 55px	
 		&__title
-			font-size: 17px
+			font-size: 17px					
 		img.content__form_img
-			filter: blur(2px)	
+			filter: blur(2px)				
 
-	.error
-		text-align: center
-		font-size: 13px														
-
-	
+	.error-form	
+		font-size: 14px		
 
