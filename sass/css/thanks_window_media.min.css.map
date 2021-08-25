@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../media/thanks_window_media.sass"
+    ],
+    "names": [],
+    "file": "thanks_window_media.min.css"
+}

@@ -11,7 +11,6 @@ export const filter_dates = (arr) => {
         newArr = [],
         sum = 0;
 
-
     if (arr.length < 2) {
         newArr = storage.filter(i => new Date(i.date).dateSum() === arr[0].dateSum());
         sum = newArr.reduce((acc, { price }) => acc += price, 0);

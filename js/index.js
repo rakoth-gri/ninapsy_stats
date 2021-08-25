@@ -12,13 +12,17 @@ import {
     labelAccordionContent,
     labelAccordionTrigger,
     label,
-    burger
+    burger,
+    thanks_mess,
+    dict
 } from "./constants.js";
 import { Validation } from "./validation.js";
 import { showJournal } from "./showJournal.js";
 import { filter_likes } from "./filter_likes.js";
 import { filter_dates } from "./filter_dates.js";
 import { filter_names } from "./filter_names.js";
+import { fetch_data } from "./fetch_data.js";
+import { thanks_window, thanks_window_close } from "./thanks_window.js";
 
 // создаем массив активных элементов формы и имеющих
 const form__elements = [...form.elements];
@@ -37,8 +41,8 @@ form.addEventListener("submit", function(e) {
     e.preventDefault();
 
     let validate = true,
-        storage = getFromLS(),
-        price;
+        storage = getFromLS();
+
 
     for (let i of form__elements) {
         if (i.value === "") {
@@ -62,7 +66,21 @@ form.addEventListener("submit", function(e) {
         storage.push(data);
         RecordInLS(storage);
         showJournal(storage);
-        this.reset();
+        fetch_data(data)
+            .then(resp => resp.json())
+            .then((resp) => {
+                console.log(resp);
+                form.reset();
+                thanks_mess.textContent = dict.ok;
+            })
+            .catch(() => {
+                console.error("Ошибка отправки данных!");
+                thanks_mess.textContent = dict.err;
+            })
+            .finally(() => {
+                thanks_window();
+                setTimeout(thanks_window_close, 3000);
+            });
     }
 });
 

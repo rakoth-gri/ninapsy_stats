@@ -19,7 +19,11 @@ const form = document.querySelector('.content__form'),
     labelAccordionContent = label.querySelectorAll('.label__accordion_content'),
     labelAccordionTrigger = label.querySelectorAll('.label__accordion_trigger'),
 
-    burger = document.querySelector('.icon-paragraph-justify');
+    burger = document.querySelector('.icon-paragraph-justify'),
+
+    thanksWinWrapper = document.querySelector('.thanks_win_wrapper'),
+    thanks_mess = thanksWinWrapper.querySelector('.thanks_mess'),
+    thanks_exit = thanksWinWrapper.querySelector('.thanks_win_exit');
 
 // Переменные
 let content__posts = document.createElement('div');
@@ -31,6 +35,12 @@ const Reg_name = /^[A-ZА-Я\s]{3,20}$/i,
     Reg_tel = /^[\d]{11}$/i,
     Reg_textarea = /^.{15,120}$/i,
     Reg_date = /^[0-9]{4}.[0-9]{2}.[0-9]{2}$/i;
+
+// словарь для асинхронного запроса!
+const dict = {
+    ok: "Карточка клиента успешно отправлена!",
+    err: "Произошла ошибка отправки данных!"
+};
 
 // экспорт в другие модули -------
 export {
@@ -56,5 +66,9 @@ export {
     labelAccordionContent,
     labelAccordionTrigger,
     label,
-    burger
+    burger,
+    thanksWinWrapper,
+    thanks_mess,
+    thanks_exit,
+    dict
 };
