@@ -8,7 +8,7 @@ const form = document.getElementById('passForm'),
 
 link.addEventListener('click', () => {
 
-    const mass = ["ninagalieva_psy", "snktspmnr1105"];
+    const mass = ["nina_psy", "rebenok"];
     let result = true;
 
     formElements.forEach((el, ind) => {
@@ -21,5 +21,11 @@ link.addEventListener('click', () => {
         }
     });
 
-    result ? link.setAttribute('href', "./main.html") : link.removeAttribute('href');
+    if (result) {
+        link.setAttribute('href', "./main.html");
+        link.classList.add('active');
+    } else {
+        link.removeAttribute('href');
+        link.classList.remove('active');
+    }
 });

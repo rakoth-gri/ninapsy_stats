@@ -34,7 +34,11 @@
     height: 50px;
     padding: 10px;
     background: none;
-    color: #ffd
+    color: #ffd;
+}
+
+.active {
+    background-color: rgb(182, 165, 11);
 }
 
 .pass__form_elem::placeholder {
@@ -69,4 +73,46 @@
 
 a.pass__form_elem {
     text-align: center;
+}
+
+
+/* медиа -запросы --------------------- */
+
+@media ( min-width: 991.99px) and ( max-width: 1399.98px) {
+    * {
+        font-size: 18px;
+    }
+    .pass__form {
+        width: 45%;
+    }
+}
+
+@media ( min-width: 768px) and ( max-width: 991.99px) {
+    * {
+        font-size: 17px;
+    }
+    .pass__form {
+        width: 55%;
+    }
+}
+
+@media ( min-width: 576px) and ( max-width: 767.99px) {
+    * {
+        font-size: 16px;
+    }
+    .pass__form {
+        width: 65%;
+    }
+}
+
+@media ( max-width: 576px) {
+    * {
+        font-size: 15px;
+    }
+    .pass__form {
+        width: 85%;
+    }
+    .error {
+        text-align: center;
+    }
 }

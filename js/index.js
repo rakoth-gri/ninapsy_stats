@@ -129,10 +129,11 @@ label__name.addEventListener("input", function() {
     let a = this.value.trim().toLowerCase(),
         { nameArr, summ } = filter_names(a);
 
-    if (nameArr.length) {
+    if (nameArr.length || this.value === "") {
         showJournal(nameArr);
         label__sum.style.display = "block";
         label__sum.innerHTML = summ.toLocaleString() + " &#8381;";
+        this.nextElementSibling.textContent = "";
 
     } else {
         this.nextElementSibling.textContent = "Выбранное имя отсутствует в базе";
