@@ -5,10 +5,9 @@ export const likedPosts = likeStore => {
 
     let currentLS = getFromLS();
 
-    for (let { id, like }
-        of currentLS) {
+    for (let i of currentLS) {
 
-        likeStore.includes(id) ? like = true : like = false;
+        likeStore.includes(i.id) ? i.like = true : i.like = false;
 
     }
     RecordInLS(currentLS);

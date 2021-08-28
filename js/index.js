@@ -25,7 +25,7 @@ import { fetch_data } from "./fetch_data.js";
 import { thanks_window, thanks_window_close } from "./thanks_window.js";
 
 // создаем массив активных элементов формы и имеющих
-const form__elements = [...form.elements];
+const form__elements = Array.from(form.elements);
 form__elements.splice(form__elements.length - 1, 1);
 
 // массив локального хранилища
@@ -35,6 +35,7 @@ showJournal(storage);
 
 // валидация данных, поступающих в элементы формы
 Validation(form__elements);
+
 
 // оснавная функция формы! ---------------
 form.addEventListener("submit", function(e) {
@@ -68,8 +69,7 @@ form.addEventListener("submit", function(e) {
         showJournal(storage);
         fetch_data(data)
             .then(resp => resp.json())
-            .then((resp) => {
-                console.log(resp);
+            .then(() => {
                 form.reset();
                 thanks_mess.textContent = dict.ok;
             })

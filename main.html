@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Stats </title>
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="cache-control" content="no-cache">
+    <script defer src="./js/index.js" type="module"></script>
+    <link rel="stylesheet" type="text/css" href="./css/main.min.css?13">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@500&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="./favicon/favicon_stats.jpg" type="image/x-icon">
+</head>
+
+<body>
+    <!-- контейнер приложения -->
+    <div class="wrapper">
+        <span class="icon-paragraph-justify"></span>
+        <!-- Фильтры в лейбле -->
+        <div class="label">
+            <a class="label__app" href="./main.html"> обновить </a>
+            <!-- <br> -->
+            <small class="label__author"> by ninagalieva_psy </small>
+
+            <fieldset>
+                <legend> <span class="icon-filter"></span> </legend>
+
+                <button class="label__button"> <span class="icon-star-empty"></span> избранное </button>
+
+                <div class="label__accordion">
+
+                    <span class="icon-circle-right label__accordion_trigger"></span> по дате
+                </div>
+
+                <div class="label__accordion_content">
+                    <label for="begin"> 
+                    <span class="icon-calendar"></span> 
+                    <input type="date" class="label__input" id="begin">  
+                </label>
+                    <label for="end">
+                    <span class="icon-calendar"></span>  
+                    <input type="date" class="label__input" id="end"> 
+                </label>
+                    <button class="label__btn_date"> фильтровать </button>
+                </div>
+
+                <div class="label__accordion">
+
+                    <span class="icon-circle-right label__accordion_trigger"></span> по имени
+                </div>
+
+                <div class="label__accordion_content">
+                    <input type="text" class="label__name" placeholder="Введите имя">
+                    <span class="error"></span>
+                </div>
+            </fieldset>
+
+            <hr>
+            <div class="label__sum"></div>
+        </div>
+
+        <!-- Контент -->
+        <div class="content">
+            <form class="content__form">
+                <input type="text" class="content__form_input" placeholder="Имя" name="name">
+                <span></span>
+                <input type="text" class="content__form_input" placeholder="Телефон" name="tel">
+                <span></span>
+                <select name="select" class="content__form_select">
+                    <option value=""> Форма приема </option>
+                    <option value="очная"> очная  </option>
+                    <option value="заочная"> заочная </option>
+                </select>
+                <span> </span>
+                <input type="text" class="content__form_input" placeholder="Введите дату" name="date">
+                <span></span>
+                <textarea type="text" class="content__form_textarea" placeholder="Запрос" name="textarea"></textarea>
+                <span></span>
+                <button type="submit" class="content__form_btn"> Отправить </button>
+            </form>
+
+            <!-- фон для секции контента -->
+            <img alt="фон секции" src="./img/bg__main.jpg" class="content__form_img">
+            <h1 class="content__title"> Журнал записей... </h1>
+        </div>
+
+        <!-- информация о пациенте -->
+        <div class="post_mess_wrapper">
+            <div class="post_mess"></div>
+        </div>
+
+        <div class="thanks_win_wrapper">
+            <div class="thanks_mess"> </div>
+            <div class="thanks_win_exit"> &#10006; </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

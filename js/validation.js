@@ -1,4 +1,4 @@
-import { Reg_name, Reg_tel, Reg_textarea, Reg_date } from "./constants.js";
+import { Reg_name, Reg_tel, Reg_textarea, Reg_date, btn } from "./constants.js";
 
 export const Validation = (data) => {
 
@@ -24,4 +24,5 @@ function correctValues(el) {
         Reg_date.test(el.value) ? elem.textContent = '' : elem.textContent = 'Дата в формате год-месяц-число: "2020-07-28"';
     else
         el.value ? elem.textContent = '' : elem.textContent = 'Выберите тип консультации';
+
 }
